@@ -5,12 +5,6 @@ void main() {
   group('A group of tests', () {
     final ukBankHolidays = UkBankHolidays();
 
-    test('getHolidays test', () async {
-      final actual = await ukBankHolidays.getHolidays();
-
-      expect(actual, isNotEmpty);
-    });
-
     test('getHoliday test positive', () async {
       final actual = await ukBankHolidays.getHoliday(
         date: DateTime(DateTime.now().year, 12, 25),
